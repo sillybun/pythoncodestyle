@@ -13,7 +13,7 @@ python << endOfPython
 
 from pythoncodestyle import *
 
-vim.current.buffer[:] = code_style(list(vim.current.buffer))
+vim.current.buffer[:] = style_code(list(vim.current.buffer))
 
 endOfPython
 endfunction
