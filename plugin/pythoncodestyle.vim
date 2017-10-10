@@ -21,4 +21,4 @@ endfunction
 " --------------------------------
 "  Expose our commands to the user
 " --------------------------------
-command! style call Style_entire_code()
+command! Style call Style_entire_code()

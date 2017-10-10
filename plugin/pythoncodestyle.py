@@ -16,6 +16,15 @@ def style_sentence(sentence):
     newsentence, n = re.subn('\s\)', ')', newsentence)
     newsentence, n = re.subn('\s*=\s*', ' = ', newsentence)
     newsentence, n = re.subn('\s*==\s*', ' == ', newsentence)
+    temp = newsentence[:]
+    newsentence = ''
+    flag = True
+    for c in temp:
+        if (flag and (c == '\t')) or not flag:
+            newsentence = newsentence + c
+        elif flag and (not (c.isspace())):
+            flag = False
+            newsentence = newsentence + c
     return newsentence
 
 
